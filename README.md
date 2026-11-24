@@ -103,9 +103,13 @@ non-deterministic LLM labelling with a controllable in-house model.
 - **[ai-portfolio-manager](https://github.com/aabolfadl/ai-portfolio-manager)** — a
   mixture-of-agents investment simulator where each agent runs a distinct strategy and an
   aggregation layer resolves them into one weekly position.
-- **[amazon-replica](https://github.com/aabolfadl/amazon-replica)** — five Spring Boot
-  microservices over 13 databases (PostgreSQL, MongoDB, Cassandra, Redis, Neo4j). I was co-scrum
-  master for the 13-engineer team; full marks, shipped without an escalation.
+- **[amazon-replica](https://github.com/aabolfadl/amazon-replica)** — an e-commerce backend
+  run as a Kubernetes platform: six services over **polyglot persistence, ten datastores on six
+  engines** (PostgreSQL ×5, MongoDB, Cassandra, Redis, Neo4j, Elasticsearch) plus RabbitMQ, all as
+  StatefulSets, observed with Prometheus, Loki and Grafana. I built its **GitHub Actions CI/CD**
+  (JUnit gate, parallel per-service Docker builds pushed to GHCR) and its **horizontal pod
+  autoscaling**. Co-scrum master (one of two) for the 13-engineer team; full marks, shipped
+  without an escalation.
 
 ---
 
