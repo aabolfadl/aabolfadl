@@ -1,21 +1,19 @@
 # Ahmed Abolfadl
 
-**ML/AI engineer.** I build systems where the claim is measured rather than assumed — the
-interesting result is usually the one that shows your measurement was lying to you.
+**ML Engineer/Data Scientist** with an increasing interest in MLOps, specifically Model Serving.
 
-2026 Computer Science graduate of the German University in Cairo (top 10% of 550).
-Three first-author papers: two IEEE, one arXiv preprint.
+2026 Computer Engineering graduate of the German University in Cairo with High Honors (top 10% of 550).
 
-📍 Cairo, Egypt — **UTC+2, full overlap with European hours** · 🌍 Open to remote ML/AI roles worldwide
-· 🗣️ Arabic (native), English (fluent), German (B1), French
+📍 Cairo, Egypt **UTC+2** · Open to remote ML/Data roles worldwide
+· Languages: Arabic (native), English (fluent), German (B1), French
 
 ---
 
 ## Start here
 
-Three projects worth your time. Everything else on this profile is coursework — see the bottom.
+Three projects worth your time.
 
-### 🏦 [kontograph](https://github.com/aabolfadl/kontograph) — real-time AML for SEPA Instant payments
+### [kontograph](https://github.com/aabolfadl/kontograph): real-time AML for SEPA Instant payments
 *Python · PyTorch Geometric · Kafka · Iceberg · DuckDB · FastAPI · ONNX — 22k LoC, 267 tests*
 
 An end-to-end anti-money-laundering pipeline over **1,562,860** simulated SEPA Instant payments,
@@ -24,36 +22,33 @@ overnight batch window that AML analytics used to run in.
 
 - Decides in **8 ms p99** against that 200 ms budget.
 - A temporal graph network with per-account memory lifts PR-AUC from **0.0053** (LightGBM tabular
-  baseline) to **0.1717** — **+0.166** absolute, 95% CI [0.105, 0.241] under a day-blocked paired
+  baseline) to **0.1717** - **+0.166** absolute, 95% CI [0.105, 0.241] under a day-blocked paired
   bootstrap. Per-node memory alone more than doubles the score.
 - Each feature is defined once and compiled to three execution backends, with property-based tests
   that perturb future events to prove no feature can read them. **The suite caught three
-  point-in-time leakage violations that code review had passed** — each would have inflated
+  point-in-time leakage violations that code review had passed**, each would have inflated
   reported performance.
 - Exporting the tree ensemble to ONNX moved the mean score by **7.4 × 10⁻⁸** and still flipped
   **0.26% of decisions**, inflating alert volume **12%**, because 32-bit accumulation crosses a
   cost-optimal threshold of 3.98 × 10⁻⁴. **A serving-format conversion is a model change until
   measured.**
 
-Sole-author preprint · <!-- TODO: paste the arXiv link here the moment the ID goes live -->
-
-### 🔍 [bilingual-hallucination-detector](https://github.com/aabolfadl/bilingual-hallucination-detector) — Arabic/English RAG faithfulness
+### [bilingual-hallucination-detector](https://github.com/aabolfadl/bilingual-hallucination-detector): Arabic/English RAG faithfulness
 *Qwen2.5 · PEFT · NLI · Hugging Face Inference — 🥇 1st of 22 teams, Unifonic AI Hackathon*
 
 Detects when a retrieval-augmented answer isn't supported by its sources, in Arabic and English,
-by stacking an NLI entailment stage under an LLM-as-a-Judge stage. Arabic is the harder half —
-models are measurably weaker there, which is most of the point.
+by stacking an NLI entailment stage under an LLM-as-a-Judge stage. Arabic is the harder half, models are measurably weaker there, which is most of the point.
 
 | Model | Accuracy | Recall | Latency | Size |
 |---|---:|---:|---:|---:|
 | Qwen2.5-3B-Instruct | 95.3% | **97.3%** | 424 ms/sample | 6.2 GB |
 | Qwen2.5-1.5B-Instruct | 94.0% | 94.7% | **251 ms/sample** | 3.1 GB |
 
-Shipped the 1.5B: **1.7× the throughput at half the memory for 2.6 points of recall** — a trade
+Shipped the 1.5B: **1.7× the throughput at half the memory for 2.6 points of recall**, a trade
 worth making explicit rather than defaulting to the bigger model. Deployed as a live
 Hugging Face inference API. Fine-tuned weights: [balash-faty](https://github.com/aabolfadl/balash-faty)
 
-### 📄 [contract-nli](https://github.com/aabolfadl/contract-nli) — multi-agent NDA review
+### [contract-nli](https://github.com/aabolfadl/contract-nli): multi-agent NDA review
 *LangGraph · Llama-3.1-8B · ChromaDB · Neo4j · GraphRAG*
 
 Reviews NDAs against the 17 standard hypotheses of the public
@@ -72,12 +67,13 @@ compared against each other:
 
 ## Research
 
-I work on trend forecasting from scientific literature, LLM evaluation, and graph ML for
+I worked on trend forecasting from scientific literature, LLM evaluation, and graph ML for
 financial crime.
 
 - **A. Abolfadl.** *KONTOGRAPH: Verified Point-in-Time Feature Consistency and Amortised
   Explanation for Real-Time Anti-Money Laundering under a 200 ms Decision Budget.*
-  arXiv preprint, 2026. Sole author.
+  arXiv preprint, 2026. First author.
+  [arXiv](https://arxiv.org/abs/2608.22389)
 - **A. Abolfadl** et al. *Forecasting Technological Directions in Wireless Networks and Mobile
   Computing via AutoML Framework.* **IEEE MECOM 2025.** First author.
   [arXiv](https://arxiv.org/abs/2606.27394) · [IEEE Xplore](https://ieeexplore.ieee.org/abstract/document/11439456)
@@ -87,9 +83,8 @@ financial crime.
   Pipeline for Predicting Emerging Trends.* **IEEE ICCA 2025.** First author.
   [arXiv](https://arxiv.org/abs/2607.22641) · [IEEE Xplore](https://ieeexplore.ieee.org/abstract/document/11430858/)
 
-Since May 2025 I've been the only undergraduate in a five-member research cluster alongside a
-professor, an associate professor, and PhD and MSc candidates. Our journal submission is under
-review at the *Journal of King Saud University — Computer and Information Sciences*; I own the
+Since May 2025 I've been the only undergraduate in a five-member graduate-level research cluster. Our journal submission is under
+review at the *Journal of Machine Learning and Knowledge Extraction (MDPI)*; I own the
 fine-tuning track, using curriculum-learning schedules for Flan-T5 topic labelling to replace
 non-deterministic LLM labelling with a controllable in-house model.
 
@@ -100,24 +95,24 @@ non-deterministic LLM labelling with a controllable in-house model.
 
 ## Also worth a look
 
-- 🧳 **[ai-agents-for-tourism](https://github.com/aabolfadl/ai-agents-for-tourism)** — 🥈 2nd of 13
+- **[ai-agents-for-tourism](https://github.com/aabolfadl/ai-agents-for-tourism)**: 🥈 2nd of 13
   teams, Dell Technologies AI Empower Hackathon. An LLM agent that re-plans a traveler's itinerary
   against live weather and crowding, cascading each change into ride-hailing and restaurant
   bookings. Built in 24 hours with no dataset provided; award presented by Egypt's Minister of
   Communications and IT.
-- 📈 **[ai-portfolio-manager](https://github.com/aabolfadl/ai-portfolio-manager)** — a
+- **[ai-portfolio-manager](https://github.com/aabolfadl/ai-portfolio-manager)** — a
   mixture-of-agents investment simulator where each agent runs a distinct strategy and an
   aggregation layer resolves them into one weekly position.
-- 🛒 **[amazon-replica](https://github.com/aabolfadl/amazon-replica)** — five Spring Boot
-  microservices over 13 databases (PostgreSQL, MongoDB, Cassandra, Redis, Neo4j). I was scrum
+- **[amazon-replica](https://github.com/aabolfadl/amazon-replica)** — five Spring Boot
+  microservices over 13 databases (PostgreSQL, MongoDB, Cassandra, Redis, Neo4j). I was co-scrum
   master for the 13-engineer team; full marks, shipped without an escalation.
 
 ---
 
 ## Everything else
 
-The remaining repositories are university coursework and early projects — an OS scheduler, a
-Tomasulo simulator, a Haskell chess engine, an OpenGL game, a VHDL pet feeder, assorted web apps.
+The remaining repositories are mostly university coursework and early projects (an OS scheduler, a
+Tomasulo simulator, a Haskell chess engine, an OpenGL game, a VHDL pet feeder, assorted web apps).
 They're public for the record rather than as a portfolio. **The three projects at the top are the
 ones that represent how I work now.**
 
@@ -127,6 +122,3 @@ ones that represent how I work now.**
 
 📧 [ahmed.a.abolfadl@gmail.com](mailto:ahmed.a.abolfadl@gmail.com) ·
 💼 [LinkedIn](https://www.linkedin.com/in/ahmed-abolfadl-bb640624b/)
-
-Currently looking for remote ML/AI engineering work — full-time or contract. If you're building
-LLM evaluation, retrieval systems, or ML on graphs, I'd like to hear about it.
