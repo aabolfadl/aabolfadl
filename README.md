@@ -1,11 +1,11 @@
 # Ahmed Abolfadl
 
-**ML Engineer/Data Scientist** with an increasing interest in MLOps, specifically Model Serving.
+Computer Engineering graduate passionate about **Machine Learning**, **Data Science** and, more recently, **MLOps**.
 
 2026 Computer Engineering graduate of the German University in Cairo with High Honors (top 10% of 550).
 
 📍 Cairo, Egypt **UTC+2** · Open to remote ML/Data roles worldwide
-· Languages: Arabic (native), English (fluent), German (B1), French
+· Languages: Arabic (native), English (fluent), French (B1), German (A2)
 
 ---
 
